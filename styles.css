@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+html {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #0A0A22;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+#nav-div {
+    position: fixed;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    width: 250px;
+    max-height: 300px;
+    min-height: 300px;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #3B3B4F;
+    border-radius: 7px;
+}
+   
+#navbar header {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+#navbar header h1 {
+    font-size: 1.7rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nav-link {
+    flex: 1;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding-left: 2.8rem;
+}
+
+#navbar a:first-of-type, #navbar a:last-of-type {
+    padding-left: 2rem;
+}
+  
+.nav-link:hover {
+    background-color: #3B3B4F;
+    filter: brightness(140%);
+    border-radius: 5px;
+  }
+
+#main-doc {
+    flex: 1;
+    border-radius: 7px;
+    background-color: #1B1B32;
+    height: auto;
+    padding: 2rem;
+    margin-left: 265px;
+} 
+
+section header h1 {
+    padding-top: 20px;
+    font-size: 1.8rem;
+}
+
+#introduction h1{
+    padding-top: 0;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+
+section p {
+    width: 90%;
+    margin:  0 auto;
+    text-align: justify;
+}
+
+
+.main-section:last-of-type p, .main-section:first-of-type p{
+    padding-bottom: 0.6rem;
+}
+
+li {
+    list-style-type: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+span {
+    display: block;
+    padding-left: 6%;
+    margin-bottom: 0.5rem;
+
+}
+
+pre {
+    background: #1B1B32;
+    filter: brightness(150%);
+    border-radius: 7px;
+    width: 90%;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1000px){
+    #navbar header h1 {
+        font-size: 1.4rem;
+    }
+
+    #navbar {
+        width: 20vw;
+        min-width: 150px;
+    }
+
+    #navbar header h1, .nav-link {
+        flex:1;
+    }
+
+    #main-doc {
+        width: 70%;
+        margin-left: 22%;
+        padding: 1rem;
+    }
+
+    .nav-link, #navbar a:first-of-type, #navbar a:last-of-type {
+        padding-left: 1rem;
+
+    }
+    p {
+        font-size: 1rem;
+    }
+
+    section header h1, h2 {
+        font-size: 1.4rem;
+        padding-top: 10px;
+    }
+
+    pre {
+        font-size: 1rem;
+    } 
+}
+
+@media screen and (max-width: 900px){
+    body {
+        margin: 0;
+        font-size: 2.3vw;
+    }
+
+    #navbar {
+        flex-direction: row;
+        max-height: 60px;
+        min-height: 60px;
+        padding: 0;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    #navbar header h1{
+        font-size: 1.3rem;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        display: none;
+    }
+    
+    #main-doc {
+        width: 100%;
+        margin: 15px 0 0 0;
+        padding: 1.3rem;
+        padding-top: 50px;
+        border-radius: 0;
+    }
+
+    section header h1, h2 {
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+
+    p, li {
+        font-size: 1rem;
+
+    }
+
+    pre {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    pre {
+        font-size: 0.7rem;;
+    }
+
+    h1, h1 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
