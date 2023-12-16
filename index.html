@@ -15,14 +15,20 @@
                 <header>
                     <h1>HTML History</h1>
                 </header>
-                <a class="nav-link" href="#What_is_HTML">What is HTML</a>
-                <a class="nav-link" href="#HTML 1.0">HTML 1.0</a>
-                <a class="nav-link" href="#HTML_2.0">HTML 2.0</a>
-                <a class="nav-link" href="#HTML_3.1">HTML 3.1</a>
-                <a class="nav-link" href="#HTML_4.01">HTML 4.01</a>
-                <a class="nav-link" href="#XHTML_1.0">XHTML 1.0</a>
-                <a class="nav-link" href="#HTML5">HTML5 </a>
-                <a class="nav-link" href="#Summary">Summary</a>
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+              </label>
+                <div id="nav-link-div">
+                    <a class="nav-link" href="#What_is_HTML" onclick="closeMenu(this)">What is HTML</a>
+                    <a class="nav-link" href="#HTML_1.0" onclick="closeMenu(this)">HTML 1.0</a>
+                    <a class="nav-link" href="#HTML_2.0" onclick="closeMenu(this)">HTML 2.0</a>
+                    <a class="nav-link" href="#HTML_3.1" onclick="closeMenu(this)">HTML 3.1</a>
+                    <a class="nav-link" href="#HTML_4.01" onclick="closeMenu(this)">HTML 4.01</a>
+                    <a class="nav-link" href="#XHTML_1.0" onclick="closeMenu(this)">XHTML 1.0</a>
+                    <a class="nav-link" href="#HTML5" onclick="closeMenu(this)">HTML5 </a>
+                    <a class="nav-link" href="#Summary" onclick="closeMenu(this)">Summary</a>
+                </div>
             </nav>
         </div>
         <main id="main-doc">
@@ -181,5 +187,41 @@
                 <p>In essence, HTML stands as one of the most impactful technologies in the history of computing. Continuously adapting to the evolving internet landscape, it remains the cornerstone upon which the web is constructed.</p>
             </section>           
         </main>
+
+        <!-- script cadded for animation only-->
+        <!-- script cadded for animation only-->
+
+        <script>
+            function closeMenu(event) {
+                document.getElementById("menu-toggle").checked = false;
+                }
+            /*document.addEventListener('DOMContentLoaded', function () {
+                // Get all the nav links
+                var navLinks = document.querySelectorAll('.nav-link');
+    
+                // Add click event listener to each nav link
+                navLinks.forEach(function (link) {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent the default behavior of the link
+    
+                        // Get the target section ID from the clicked nav-link
+                        var targetId = link.getAttribute("href").substring(1);
+                        var targetElement = document.getElementById(targetId);
+    
+                        // Calculate the offset to leave space for the fixed navbar
+                        var offset = document.getElementById("nav-div").offsetHeight;
+    
+                        // Scroll to the target section with an offset
+                        window.scrollTo({
+                            top: targetElement.offsetTop - offset,
+                            behavior: "smooth"
+                        });
+    
+                        // Close the menu
+                        document.getElementById("menu-toggle").checked = false;
+                    });
+                });
+            });*/
+        </script>
 </body>
 </html>
